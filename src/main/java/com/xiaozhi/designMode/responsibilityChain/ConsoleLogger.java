@@ -1,5 +1,8 @@
 package com.xiaozhi.designMode.responsibilityChain;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ConsoleLogger extends AbstractLogger {
 
 	public ConsoleLogger(int level) {
@@ -8,7 +11,7 @@ public class ConsoleLogger extends AbstractLogger {
 
 	@Override
 	protected void write(String message) {
-		System.out.println("Standard Console::Logger: " + message);
+		log.info("Standard Console::Logger: {}", message);
 	}
 	
 }

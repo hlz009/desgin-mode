@@ -1,5 +1,8 @@
 package com.xiaozhi.designMode.responsibilityChain;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class FileLogger extends AbstractLogger {
 
 	public FileLogger(int level){
@@ -7,7 +10,7 @@ public class FileLogger extends AbstractLogger {
 	}
 	 
     @Override
-    protected void write(String message) {    
-        System.out.println("File::Logger: " + message);
+    protected void write(String message) {
+    	log.info("File::Logger: {}", message);
     }
 }
