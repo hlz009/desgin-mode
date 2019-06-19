@@ -8,5 +8,10 @@ public class Demo {
 		Image realImage = new RealImage("xxx.jpg");
 		Image proxyImage = (Image) new ProxyFactory(realImage).getProxyInstance();
 		proxyImage.display();
+		
+		Audio realAudio = new RealAudio("xxx.mp3");
+		Audio proxyAudio = (Audio) new ProxyFactory(realAudio).getProxyInstance();
+		proxyAudio.play();
+		proxyAudio.stop();
 	}
 }

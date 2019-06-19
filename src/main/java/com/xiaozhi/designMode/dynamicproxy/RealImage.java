@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 @Slf4j
-public class RealImage implements Image {
+public class RealImage extends AbstractFile implements Image {
 	private String fileName;
 	
 	public RealImage(String fileName) {
@@ -20,9 +20,5 @@ public class RealImage implements Image {
 	@Override
 	public void display() {
 		log.info("display {}", fileName);
-	}
-
-	private void loadFromDisk(String fileName) {
-		log.info("loading {}", fileName);
 	}
 }
