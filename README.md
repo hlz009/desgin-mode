@@ -1,2 +1,2 @@
 # 设计模式
-简单demo
+简单demo by xiaozhi
